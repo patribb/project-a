@@ -63,7 +63,7 @@ class AttendeeControllerTest extends TestCase
     public function update_redirects()
     {
         $attendee = Attendee::factory()->create();
-        $name = $this->faker->name;
+        $name = $this->faker->name();
 
         $response = $this->put(route('attendee.update', $attendee), [
             'name' => $name,

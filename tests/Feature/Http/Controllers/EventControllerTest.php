@@ -60,8 +60,8 @@ class EventControllerTest extends TestCase
      */
     public function store_saves_and_redirects()
     {
-        $name = $this->faker->name;
-        $slug = $this->faker->slug;
+        $name = $this->faker->name();
+        $slug = $this->faker->slug();
         $scheluded_at = $this->faker->dateTime();
         $user = User::factory()->create();
 
@@ -134,8 +134,8 @@ class EventControllerTest extends TestCase
     public function update_redirects()
     {
         $event = Event::factory()->create();
-        $name = $this->faker->name;
-        $slug = $this->faker->slug;
+        $name = $this->faker->name();
+        $slug = $this->faker->slug();
         $scheluded_at = $this->faker->dateTime();
         $user = User::factory()->create();
 

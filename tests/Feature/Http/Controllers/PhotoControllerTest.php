@@ -63,8 +63,8 @@ class PhotoControllerTest extends TestCase
     {
         $attendee = Attendee::factory()->create();
         $event = Event::factory()->create();
-        $path = $this->faker->word;
-        $reviewed = $this->faker->boolean;
+        $path = $this->faker->word();
+        $reviewed = $this->faker->boolean();
 
         $response = $this->post(route('photo.store'), [
             'attendee_id' => $attendee->id,
@@ -137,8 +137,8 @@ class PhotoControllerTest extends TestCase
         $photo = Photo::factory()->create();
         $attendee = Attendee::factory()->create();
         $event = Event::factory()->create();
-        $path = $this->faker->word;
-        $reviewed = $this->faker->boolean;
+        $path = $this->faker->word();
+        $reviewed = $this->faker->boolean();
 
         $response = $this->put(route('photo.update', $photo), [
             'attendee_id' => $attendee->id,
