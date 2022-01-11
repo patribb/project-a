@@ -15,8 +15,8 @@ class PhotoFactory extends Factory
         return [
             'attendee_id' => Attendee::factory(),
             'event_id' => Event::factory(),
-            'path' => $this->faker->word,
-            'reviewed' => $this->faker->boolean,
+            'path' => $this->faker->word(),
+            'reviewed' => $this->faker->boolean(),
         ];
     }
 }
