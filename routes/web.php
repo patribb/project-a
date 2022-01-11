@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('attendee', App\Http\Controllers\AttendeeController::class)->only('show', 'edit', 'update');
+
+Route::resource('event', App\Http\Controllers\EventController::class);
+
+Route::resource('user', App\Http\Controllers\UserController::class);
+
+Route::resource('photo', App\Http\Controllers\PhotoController::class);
